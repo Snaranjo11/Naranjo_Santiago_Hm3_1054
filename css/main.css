@@ -1,0 +1,120 @@
+display: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background-color: #d4b9b9;
+    background-image: url(../images/luz-interior-plantilla-vacia-gris.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+
+
+header {
+    background-color: rgb(33, 27, 27);
+    display:flex;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-top: 45px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 8px;
+}
+
+header li:last-of-type::after {
+    content: "\25bc";
+    padding-left: 4px;
+}
+
+input[id="checkbox1"] {
+    margin-right: 10px;
+    accent-color: rgb(159, 190, 0);
+}
+
+input[id="checkbox1"]:checked + span::after {
+    content: '\2713';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(128, 119, 0);
+    border: 4px solid #a8b704;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    animation: fadeIn 0.7s;
+}
+
+input[id="checkbox2"] {
+    margin-right: 10px;
+    accent-color: green;
+}
+
+input[id="checkbox2"]:checked + span::after {
+    content: '\2713';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(15, 128, 0);
+    border: 4px solid #005600;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+section {
+    padding: 20px;
+}
+
+section h3 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sticky_footer {
+    position: sticky;
+    top: 100%;
+    height: 80px;
+    background-color: #333;
+}
